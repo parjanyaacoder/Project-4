@@ -1,0 +1,77 @@
+import java.util.*;
+class hotel
+{
+ public static void main()
+ {
+ int n,i,j,k=0,c=0,d=0,n1,p,f=-1,l;
+ int a1[]=new int[700];
+ int b1[]=new int[700];
+ int c1[]=new int[700];
+ int d1[]=new int[700];
+ Scanner sc=new Scanner(System.in);
+ System.out.println("Enter no. of people");
+ n1=sc.nextInt();
+ double amount;
+ for(p=1;p<=n1;p++)
+ {
+     System.out.println("Enter a room no. btw 1-175 for single bedroom non ac costing Rs1500/day,176-350 for single bedroom ac costing Rs2000/day,351-525 for doublebed room non ac costing Rs1800/day,526-700 for double bedroom ac costing Rs2500/day");
+ System.out.println("Enter room no. you want to stay in");
+ n=sc.nextInt();
+  System.out.println("Enter check in date");
+  i=sc.nextInt();
+   System.out.println("Enter check out date");
+     j=sc.nextInt();
+     if(d==0)
+     {
+     a1[n-1]=i;
+     b1[n-1]=j;
+     c1[n-1]=1;
+     d1[k]=n;
+     k++;
+     d++;
+     System.out.println("Your room is booked");
+     }
+     else 
+     {
+     for(l=0;l<700;l++)
+     {
+     if(d1[l]==n)
+     f=n;
+     if(f>-1)
+     break;
+     }
+     if(i>b1[n-1])
+     {
+        c1[n-1]=1;
+        d++;
+        d1[k]=n;
+        k++;
+        System.out.println("Your room is booked");
+        }
+        else
+        {System.out.println("Room"+n+"is already booked.Choose another room");
+            n=sc.nextInt();
+            c1[n-1]=1;
+            d++;
+            d1[k]=n;
+            k++;
+            System.out.println("Your room is booked");
+        }
+        if(d>700)
+        System.out.println("Hotel booked.Please come later");
+        
+        }
+        if(n>=1&& n<+175)
+        amount =(j-i)*1500;
+        else if(n>=176&& n<=350)
+        amount =(j-i)*2000;
+        else if(n>=351 && n<=525)
+        amount=(j-i)*1800;
+        else 
+        amount=(j-i)*2500;
+        System.out.println(amount);
+     
+       
+    }
+}}
+
